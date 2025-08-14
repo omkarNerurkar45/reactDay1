@@ -1,11 +1,15 @@
 import './App.css';
 import Navbar from './protoTYpes/Navbar';
+import TextForm from './protoTYpes/TextForm';
 
 
 function App() {
   return (
     <>
-    <Navbar title="Title is Here" home="Home is here" />
+    <Navbar title="TextUtils" home="Home" />
+    <div className="container">
+      <TextForm headings="Enter your Text" />
+    </div>
     </>
   );
 }
