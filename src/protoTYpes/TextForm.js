@@ -19,6 +19,17 @@ export default function TextForm(props) {
         setText( nextText );
     }
 
+    const handleCpyClick = () => {
+        navigator.clipboard.writeText(text)
+          .then(() => {
+            alert("Copied: " + text);
+          })
+          .catch(() => {
+            alert("Failed to copy!");
+          });
+      };
+      
+ 
     const [text, setText] = useState("Enter your text");
   return (
     <>
@@ -29,6 +40,7 @@ export default function TextForm(props) {
         </div>
         <button type="button" className="btn btn-primary" onClick={handleUpClick}>UpperCase</button>
         <button type="button" className="btn btn-success mx-3" onClick={handleDwnClick}>LowerCase</button>
+        <button type="button" className="btn btn-warning mx-3" onClick={handleCpyClick}>Copy Text</button>
     </div>
     <div className="container my-4">
         <h1>Your text Summary</h1>
