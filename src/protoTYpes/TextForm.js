@@ -19,15 +19,12 @@ export default function TextForm(props) {
         setText( nextText );
     }
 
-    const handleCpyClick = () => {
+    const handleCpyClick = ()=>{
         navigator.clipboard.writeText(text)
-          .then(() => {
-            alert("Copied: " + text);
-          })
-          .catch(() => {
-            alert("Failed to copy!");
-          });
-      };
+        .then(() => {
+            alert("Text is copied" + text)
+        })
+    }
       
  
     const [text, setText] = useState("Enter your text");
