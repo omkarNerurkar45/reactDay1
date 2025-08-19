@@ -20,7 +20,7 @@ function App() {
     <>
     <Navbar title="TextUtils" home="Home" mode={mode} togglePlay={togglePlay} />
     <div className="container">
-      <TextForm />
+      <TextForm mode={mode}/>
       <About/>
     </div>
     </>
